@@ -15,3 +15,12 @@ library
     Other-modules:   Data.Histogram.Internal
                      Data.Histogram.Mutable
 
+------------------------------------------------------------
+-- hist commandline tool
+--
+
+Executable hist
+    Build-Depends:   data-default, ui-command
+    Main-Is:         hist.hs
+    Hs-Source-Dirs:  ., tools
+

@@ -1,8 +1,10 @@
 module Data.Histogram (
         Histogram,
-        fromList
+        fromList,
+	Data.Histogram.assocs
 ) where
 
+import Data.Array.Unboxed as UA
 import Data.Array.ST (runSTUArray)
 
 import Data.Histogram.Internal
@@ -16,3 +18,6 @@ fromList len values =
 	        mh <- new len
 		mapM_ (insert mh) values
 		return (mutArray mh)
+
+assocs :: Histogram -> [(Int, Int)]
+assocs (H arr) = UA.assocs arr
