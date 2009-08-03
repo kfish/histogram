@@ -1,0 +1,17 @@
+Name:                histogram
+Version:             0.1.0
+License:             BSD3
+Author:              Conrad Parker <conrad@metadecks.org>
+Category:            Development
+Synopsis:            Histogram generation
+Stability:           experimental
+Build-Type:          Simple
+Cabal-Version:       >= 1.2
+
+------------------------------------------------------------
+library
+    Build-Depends:   base, array
+    Exposed-modules: Data.Histogram
+    Other-modules:   Data.Histogram.Internal
+                     Data.Histogram.Mutable
+
